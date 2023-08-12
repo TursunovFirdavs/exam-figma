@@ -1,0 +1,118 @@
+@media only screen and (max-width: 768px){
+    .container {
+        max-width: 690px;
+        margin: auto;
+        padding: 10px;
+    }
+    .hero__section {
+        flex-direction: column;
+        hero__wrapper {
+            max-width: 100%;
+            margin: auto;
+        }
+        .hero {
+            max-width: none;
+            max-width: 690px;
+            margin: auto;
+            display: block;
+            text-align: center;
+            h1 {
+                font-size: 44px;
+                max-width: none;
+            }
+            p {
+                max-width: none;
+            }
+            a {
+                margin-bottom: 40px;
+            }
+        }
+        img {
+            width: 100%;
+            height: 314px;
+        }
+    }
+
+    .service {
+        img {
+            width: 580px;
+        }
+        flex-direction: column;
+        box-shadow: none;
+        max-width: 650px;
+        .service__card {
+            display: flex;
+            align-items: center;
+            width: 650px;
+            margin-bottom: 10px;
+            // background-color: orange;
+            padding-right: 120px;
+            border-right: 1px solid #D7D7DD;
+            padding: 32px 32px 80px;
+        }
+    }
+
+    .our__work {
+        max-width: 100%;
+        margin: auto;
+        .our__work__wrapper {
+            flex-direction: column;
+            .our__work__card {
+                width: 690px;
+                height: 460px;
+                margin: auto;
+                img {
+                    width: 100%;
+                    height: 247px;
+                }
+            }
+        }
+    }
+    .clients {
+        .clients__wrapper {
+            max-width: 768px;
+            margin: auto;
+            flex-direction: column;
+        }
+        .table__section {
+            margin-top: 80px;
+        }
+    }
+
+    .steps {
+        .steps__card {
+            max-width: 690px;
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .our__team {
+        .team__wrapper {
+            
+            grid-template-columns: 330px 330px;
+            .team__card {
+                max-width: 330px;
+                .team__contact {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    .contact {
+        .contact__wrapper {
+            flex-direction: column;
+        }
+        .contact__table {
+            margin-top: 64px;
+        }
+    }
+
+    video {
+        max-width: 675px;
+        margin: auto;
+    }
+}
+

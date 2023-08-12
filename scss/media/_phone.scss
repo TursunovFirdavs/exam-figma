@@ -1,0 +1,11 @@
+@media only screen and (max-width: 375px) {
+    .hero__section {
+        max-width: 390px;
+        margin: auto;
+        h1 {
+            background-color: orange;
+            font-size: 28px;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,477 @@
+@import "reset";
+@import "./media/table";
+@import "./media/phone";
+@import "./media/extra";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=PT+Sans:wght@400;700&display=swap');
+
+//colors
+$main-dark-color: #363738;
+$main-light-color: #fff;
+$secondary-dark-color: #6B6B6C;
+$secondary-light-color: #FFCE50;
+
+//fonts
+$exo: 'Exo 2', sans-serif;
+$pt: 'PT Sans', sans-serif;
+
+
+
+@mixin font($color, $f-family, $f-size, $f-weight, $l-height, $l-space, $margin) {
+    color: $color;
+    font-family: $f-family;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    letter-spacing: $l-space;
+    margin: $margin;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero__section {
+    margin: 190px 0 67px;
+    .hero__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        h1 {
+            max-width: 610px;
+            @include font($main-dark-color, $exo, 52px, 600, 65px, 0, 0)
+        }
+        p {
+            max-width: 525px;
+            @include font($secondary-dark-color, $pt, 16px, 0, 24px, 0, 40px 0)
+        }
+        a {
+            text-decoration: none;
+            padding-bottom: 10px;
+            border-bottom: 3px solid $secondary-light-color;
+            @include font($main-dark-color, $pt, 16px, 700, 24px, 0, 0)
+        }
+    }
+}
+
+.service {
+    max-width: 100%;
+    margin: auto;
+    padding: 40px 0 56px 80px;
+    display: grid;
+    grid-auto-flow: column;
+    // grid-template-columns: 3, 1fr;
+    gap: 0 64px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px #00000026;
+    .service__card {
+        max-width: 228px;
+        padding-right: 120px;
+        border-right: 1px solid #D7D7DD;
+        h3 {
+            @include font($main-dark-color, $exo, 20px, 600, 27px, 0, 24px 0 16px)
+        }
+        p {
+            @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 0)
+        }
+    }
+    .service__card:last-child {
+        border: none;
+    }
+}
+
+.work {
+    margin: 100px 0;
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0)
+    }
+    p {
+        max-width: 667px;
+        @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 32px 0 40px)
+    }
+    .work__wrapper {
+        display: flex;
+        gap: 140px;
+        .work__cards {
+            .work__card {
+                margin-bottom: 16px;
+                box-shadow: 0px 3px 15px 0px #0000001F;
+                max-width: 687px;
+                padding: 40px;
+                display: flex;
+                gap: 32px;
+                input {
+                    margin-top: 11px;
+                }
+                h3 {
+                    @include font($main-dark-color, $exo, 20px, 600, 30px, 0, 0 0 24px)
+                }
+                p {
+                    max-width: 446px;
+                    @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 0)
+                }
+            }
+        }
+        .work__right {
+            h3 {
+                @include font($secondary-dark-color, $exo, 20px, 600, 30px, 0, 0)
+            }
+            p {
+                @include font($secondary-dark-color, $exo, 20px, 600, 30px, 0, 0)
+            }
+            strong {
+                padding-bottom: 40px;
+                border-bottom: 3px solid #FFCE50;
+                @include font($main-dark-color, $exo, 54px, 600, 81px, 30px, 0)
+            }
+        }
+    }
+    
+}
+
+.about__us {
+    .about__us__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 62px 140px;
+        margin: 72px 0 0 66px;
+        .about__us__card {
+            display: flex;
+            align-items: center;
+            gap: 0 40px;
+            h3 {
+                @include font($main-dark-color, $exo, 20px, 600, 27px, 0, 0 0 16px)
+            }
+            p {
+                max-width: 291px;
+                @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 0)
+            }
+        }
+    }
+}
+
+.our__work {
+    margin: 120px 0 212px;
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0)
+    }
+    p {
+        max-width: 667px;
+        @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 32px 0 56px)
+    }
+    .our__work__wrapper {
+        display: flex;
+        gap: 30px;
+        .our__work__card{
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px 0px #0000001F;
+            .our__work__content {
+                padding: 24px 0 32px 32px;
+                h3 {
+                    @include font($main-dark-color, $exo, 20px, 600, 27px, 0, 24px 0 0)
+                }
+                p {
+                    width: 291px;
+                    @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 16px 0 32px)
+                }
+                strong {
+                    padding-bottom: 10px;
+                    border-bottom: 3px solid #FFCE50;
+                    @include font($main-dark-color, $exo, 16px, 600, 21px, 0, 0)
+                }
+            }
+        }
+    }
+}
+
+.clients {
+    
+    background-color: #0B7572;
+    .clients__wrapper {
+        max-width: 1240px;
+    margin: auto;
+        display: flex;
+        padding: 85px 67px 85px 81px;
+        h2 {
+            @include font($main-light-color, $exo, 48px, 600, 60px, 0, 15px 0 0 0)
+        }
+        .table__section {
+            max-width: 652px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #fff;
+            .section__top {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 32px;
+                border-bottom: 1px solid #D7D7DD;
+                p {
+                    max-width: 274px;
+                    @include font($secondary-dark-color, $pt, 11px, 400, 17px, 0, 0)
+                }
+            }
+            table {
+                margin: 32px 0 40px;
+                border-collapse: collapse;
+                tr {
+                    th {
+                        background-color: #0B7572;
+                        color: #fff;
+                        border: 1px solid #D7D7DD;
+                        padding: 15px 32px;
+                        @include font($main-light-color, $exo, 16px, 600, 24px, 0, 0)
+                    }
+                    td {
+                        border: 1px solid #D7D7DD;
+                        border-right: none;
+                        border-bottom: none;
+                        padding: 15px 16px;
+                        vertical-align: middle;
+                        h3 {
+                            max-width: 160px;
+                            @include font($main-dark-color, $pt, 14px, 700, 19px, 0, 0)
+                        }
+                        p {
+                            max-width: 115px;
+                            @include font($secondary-dark-color, $pt, 14px, 400, 18px, 0, 8px 0 )
+                        }
+                        strong {
+                            @include font($main-dark-color, $pt, 14px, 600, 19px, 0, 0)
+                        }
+                        .stars {
+                            display: flex;
+                            gap: 5px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                tr td:first-child {
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+
+.steps {
+    margin: 120px 0;
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0 0 48px)
+    }
+    .steps__card {
+        max-width: 1190px;
+        margin-left: 50px;
+        padding: 32px 0 32px 96px;
+        margin-bottom: 24px;
+        box-shadow: 0px 4px 15px 0px #0000001F;
+        display: grid;
+        grid-template-columns: 331px 568px;
+        gap: 56px;
+        h3 {
+            @include font($main-dark-color, $exo, 20px, 600, 25px, 0, 0)
+        }
+        .steps__arrow {
+            height: 2px;
+            width: 86px;
+            background-color: #FFCE50;
+            margin-top: 24px;
+        }
+        p {
+            max-width: 568px;
+            @include font($secondary-dark-color, $pt, 16px, 400, 24px, 0, 24px 0 0)
+        }
+    }
+}
+
+.logo {
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0 0 98px )
+    }
+    .logo__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 98px 0;
+        text-align: center;
+        .logo__card {
+            border-left: 1px solid #D7D7DD;
+            h3 {
+                @include font($main-dark-color, $exo, 20px, 600, 27px, 0, 32px 0 14px)
+            }
+            p {
+                @include font($secondary-dark-color, $pt, 14px, 400, 21px, 0, 0)
+            }
+        }
+        .logo__card:first-child, .logo__card:nth-child(5){
+            border-left: none;
+        }
+        .logo__card:nth-child(5), .logo__card:nth-child(8) {
+            img {
+                margin-bottom: 38px;
+            }
+        }
+        .logo__card:nth-child(2) {
+            img {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.our__team {
+    margin: 130px 0;
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0 0 98px )
+    }
+    .team__wrapper {
+        display: grid;
+        grid-template-columns: 605px 605px;
+        gap: 24px 30px;
+        .team__card {
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px 0px #00000026;
+            width: 605px;
+            .team__green {
+                height: 100%;
+                width: 51px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                background-color: #0B7572;
+            }
+            .team__contact {
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                padding: 32px 0 40px 32px;
+                .team__content {
+                    h3 {
+                        @include font($main-dark-color, $exo, 20px, 600, 24px, 0, 0)
+                    }
+                    p {
+                        @include font($secondary-dark-color, $pt, 14px, 400, 21px, 0, 12px 0 16px)
+                    }
+                    .team__arrow {
+                        height: 3px;
+                        width: 86px;
+                        background-color: #FFCE50;
+                    }
+                    .team__socials {
+                        display: flex;
+                        gap: 20px;
+                        margin-top: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 46px;
+    h2 {
+        @include font($main-dark-color, $exo, 48px, 600, 60px, 0, 0 0 98px )
+    }
+    .contact__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 72px;
+        .conect__us {
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+            margin-top: 3 2px;
+            .conect__us__by {
+                display: flex;
+                gap: 36px;
+                align-items: start;
+                .contact__info {
+                    margin-top: -10px;
+                    strong {
+                        @include font($secondary-dark-color, $pt, 14px, 400, 21px, 0, 0 0 8px )
+                    }
+                    p {
+                        @include font($main-dark-color, $exo, 20px, 600, 24px, 0, 0)
+                    }
+                }
+            }
+        }
+        .contact__table {
+            padding: 40px 0 56px 48px;
+                background-color: #F9F9FB;
+            table {
+                tr > td {
+                    padding: 32px 56px 10px 0;
+                    border-bottom: 1px solid #E9EAF2;
+                }
+                tr > td:first-child{
+                    padding-right: 56px;
+                    @include font($secondary-dark-color, $pt, 16px, 400, 20px, 0, 0)
+                }
+                tr > td:last-child {
+                    max-width: 443px;
+                    @include font($main-dark-color, $exo, 16px, 600, 20px, 0, 0)
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #0B7572;
+    margin-top: 166px;
+    .footer__wrapper {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        height: 160px;
+        align-items: start;
+        gap: 160px;
+        padding: 80px 0 30px 95px;
+        .footer__links {
+            display: flex;
+            gap: 97px;
+            ul:first-child li {
+                margin-bottom: 28px;
+                a {
+                    text-decoration: none;
+                    @include font($main-light-color, $exo, 13px, 600, 20px, 2px, 0)
+                }
+            }
+            ul:last-child li {
+                margin-bottom: 18px;
+                a {
+                    text-decoration: none;
+                    @include font($main-light-color, $exo, 13px, 500, 20px, 2px, 0)
+                }
+            }
+        }
+        .footer__last__group {
+            .footer__socials {
+                display: flex;
+                gap: 14px;
+            }
+            p {
+                @include font($main-light-color, $exo, 13px, 600, 20px, 0, 32px 0)
+            }
+            .footer__link {
+                display: flex;
+                gap: 14px;
+                padding: 7px 11px;
+                background-color: #FF9619;
+                button {
+                    border: none;
+                    background-color: #FF9619;
+                    @include font($main-light-color, $exo, 13px, 600, 20px, 0, 0)
+                }
+            }
+        }
+    }
+    p {
+        text-align: center;
+        background-color: #0B7572;
+        padding-bottom: 29px;
+        @include font($main-light-color, $exo, 12px, 500, 18px, 3px, 80px 0 0)
+    }
+}
